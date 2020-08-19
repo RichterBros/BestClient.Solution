@@ -14,7 +14,7 @@ namespace BeastClient.Controllers
     {  
       public IActionResult Index()
         {
-          var allCreatures= Creature.GetCreatures();
+          var allCreatures = Creature.GetCreatures();
           return View(allCreatures);
         }
 
