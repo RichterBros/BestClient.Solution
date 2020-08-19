@@ -13,18 +13,15 @@ namespace BeastClient.Controllers
     public class CreaturesController : Controller
     {  
       public IActionResult Index()
-        {
-          var allCreatures = Creature.GetCreatures();
-          return View(allCreatures);
-        }
+      {
+        var allCreatures = Creature.GetCreatures();
+        return View(allCreatures);
+      }
 
-      // public ActionResult Create()
-      //   {
-      //     ViewBag.CreatureId = new SelectList(_db.Creatures, "CreatureId", "Description");
-      //     return View();
-      //   }
-        
-    
-    
+      public IActionResult Details(int id)
+      {
+        var creature = Creature.GetDetails(id);
+        return View(creature);
+      }
     }
 }
