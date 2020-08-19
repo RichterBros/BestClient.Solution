@@ -1,0 +1,34 @@
+<h1>Edit Info:<h1>
+<form asp-action="/Creatures/Details/@(Model.CreatureId)" method="post">
+  <label for="creatureName">Name</label>
+  <input id="creatureName" name="creatureName" type="text" value="@Model.CreatureName">
+  <label for="creatureOriginCulture">Name</label>
+  <input id="creatureOriginCulture" name="creatureOriginCulture" type="text" value="@Model.CreatureOriginCulture">
+  <label for="creatureOriginDate">Name</label>
+  <input id="creatureOriginDate" name="creatureOriginDate" type="text" value="@Model.CreatureOriginDate">
+  <label for="creatureTaxonomy">Name</label>
+  <input id="creatureTaxonomy" name="creatureTaxonomy" type="text" value="@Model.CreatureTaxonomy">
+  <label for="creatureType">Name</label>
+  <input id="creatureType" name="creatureType" type="text" value="@Model.CreatureType">
+  <label for="creatureAbility">Name</label>
+  <input id="creatureAbility" name="creatureAbility" type="text" value="@Model.CreatureAbility">
+  <label for="creatureHabitat">Name</label>
+  <input id="creatureHabitat" name="creatureHabitat" type="text" value="@Model.CreatureHabitat">
+  <label for="creatureMorality">Name</label>
+  <input id="creatureMorality" name="creatureMorality" type="text" value="@Model.CreatureMorality">
+  <label for="creatureDescription">Name</label>
+  <input id="creatureDescription" name="creatureDescription" type="text" value="@Model.CreatureDescription">
+  <label for="creatureImage">Name</label>
+  <input id="creatureImage" name="creatureImage" type="text" value="@Model.CreatureImage">
+  <label for="creatureLifespan">Name</label>
+  <input id="creatureLifespan" name="creatureLifespan" type="text" value="@Model.CreatureLifespan">
+  <label for="creatureRelatedCreature">Name</label>
+  <input id="creatureRelatedCreature" name="creatureRelatedCreature" type="text" value="@Model.CreatureRelatedCreature">
+  <label for="creatureNemesis">Name</label>
+  <input id="creatureNemesis" name="creatureNemesis" type="text" value="@Model.CreatureNemesis">
+  <label for="creatureWeakness">Name</label>
+  <input id="creatureWeakness" name="creatureWeakness" type="text" value="@Model.CreatureWeakness">
+  <button type="submit">update</button>
+</form>
+
+<a href="/Creatures/Details/@(Model.CreatureId)"><p>Return to details</p></a>

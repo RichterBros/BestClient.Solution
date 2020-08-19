@@ -5,6 +5,8 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BeastClient.Models;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace BeastClient.Controllers
 {

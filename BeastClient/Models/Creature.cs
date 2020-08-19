@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-namespace BeastMaster.Models
+namespace BeastClient.Models
 {
   public class Creature
   {
@@ -25,7 +25,7 @@ namespace BeastMaster.Models
 
     public static List<Creature> GetCreatures()
     {
-      var apiCallTast = ApiHelper.GetAll();
+      var apiCallTask = ApiHelper.GetAll();
       var result = apiCallTask.Result;
 
       JArray jsonResponse = JsonConvert.DeserializeObject<JArray>(result);
