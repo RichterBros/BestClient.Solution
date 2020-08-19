@@ -33,5 +33,16 @@ namespace BeastMaster.Models
 
       return creatureList;
     }
+
+    public static Creature GetDetails(int id)
+    {
+      var apiCallTask = ApiHelper.Get(id);
+      var result = apiCallTask.Result;
+
+      JObject jsonResponse = JsonConvert.DeserializeObject<JObject>(result);
+      Creature creature = JsonConvert.DeserializeObject<Creature>(jsonResponse.ToString());
+
+      return creature;
+    }
   }
 }
