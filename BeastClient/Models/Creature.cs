@@ -44,5 +44,22 @@ namespace BeastMaster.Models
 
       return creature;
     }
+
+    public static void Post(Creature creature)
+    {
+      string jsonCreature = JsonConvert.SerializeObject(creature);
+      var apiCallTask = ApiHelper.Post(jsonCreature);
+    }
+
+    public static void Put(Creature creature)
+    {
+      string jsonCreature = JsonConvert.SerializeObject(creature);
+      var apiCallTask = ApiHelper.Put(creature.CreatureId, jsonCreature);
+    }
+
+    public static void Delete(int id)
+    {
+      var apiCallTask = ApiHelper.Delete(id);
+    }
   }
 }
