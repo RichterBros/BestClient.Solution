@@ -1,15 +1,27 @@
 @{
+  Layout = "_Layout";
+}
+
+@{
   ViewData["Title"] = "Details";
 }
 
-<h1>@Model.CreatureId</h1>
+<h1 align="center">@Model.CreatureName</h1>
 
-<ul>
-  <li>Name: @Model.CreatureName</li>
-  <img src="@Model.CreatureImage" alt="@Model.CreatureName">
+
+  <div class="col-md-4 col-md-push-1 text-center" style="background-color: rgba(0,0,0,0.3); border-radius: 25px;">
+    <div class="shadow-lg p-9 mb-3 rounded">
+    <br>
+    <img src="@Model.CreatureImage" alt="@Model.CreatureName">
+    <br>
+    <br>
+    <div class="container"><p>@Model.CreatureDescription</p></div>
+    <br>
+  </div>
+  </div>
+  <ul>
   <li>Origin Culture: @Model.CreatureOriginCulture</li>
   <li>Origin Date: @Model.CreatureOriginDate</li>
-  <li>Description: @Model.CreatureDescription</li>
   <li>Taxonomy: @Model.CreatureTaxonomy</li>
   <li>Type: @Model.CreatureType</li>
   <li>Abilities: @Model.CreatureAbility</li>

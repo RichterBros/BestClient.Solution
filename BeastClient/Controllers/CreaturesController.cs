@@ -1,17 +1,17 @@
+using BeastClient.Models;
+using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using BeastClient.Models;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;  
 
 namespace BeastClient.Controllers
 {
     public class CreaturesController : Controller
-    {  
+    {
       public IActionResult Index()
       {
         var allCreatures = Creature.GetCreatures();
@@ -23,5 +23,7 @@ namespace BeastClient.Controllers
         var creature = Creature.GetDetails(id);
         return View(creature);
       }
+
+      
     }
 }
